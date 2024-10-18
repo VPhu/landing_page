@@ -1,0 +1,931 @@
+@font-face {
+  font-family: "Calmiussans";
+  src: url("./font//calmiussans-high.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wright";
+  src: url("/font/Fontspring-DEMO-wrightdeco-extrabold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cosmetic";
+  src: url("/font/Cosmetic-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Garbata";
+  src: url("/font/Garbata\ Serif\ Font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #efe9e4;
+  margin: 0;
+  color: #5e5343;
+}
+
+/* Header */
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: #efe9e4;
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.nav-item {
+  padding: 10px 16px;
+}
+.text-nav {
+  font-family: 'Garbata', sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+/* Introduce yourself */
+#home {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.home-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 80px 0 140px;
+}
+.avt {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  animation-name: right;
+  animation-duration: 1.5s;
+}
+.avt-img {
+  height: 100%;
+  width: 100%;
+  clip-path: inset(7% 0% 0 0%);
+  object-fit: cover;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  margin-left: 65px;
+  margin-top: 200px;
+  animation-name: top;
+  animation-duration: 1.5s;
+}
+.intro-name {
+  font-size: clamp(75px, 6vw, 100px);
+  margin: 16px 0;
+  font-family: "Calmiussans";
+  font-weight: 100 !important;
+}
+.intro-job {
+  font-family: "Wright";
+  font-weight: bolder;
+  letter-spacing: 3px;
+  font-size: 16px;
+  margin: 0;
+}
+.intro-describe {
+  width: 43%;
+  font-family: "Garbata";
+  line-height: 1.5;
+  margin: 18px 0 0;
+  font-size: 20px;
+}
+
+.footer-home {
+  width: 100%;
+  position: relative;
+  padding-bottom: 100px;
+}
+.footer-home-img {
+  background-image: url("../../assets/icon.svg");
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  position: absolute;
+  right: 10%;
+  bottom: -80px;
+  /* animation-name: left;
+  animation-duration: 1.5s; */
+}
+
+/* About */
+#about {
+  display: flex;
+  margin-top: 20%;
+}
+.about-img {
+  width: 60%;
+  display: flex;
+}
+.child-image-about {
+  position: relative;
+  width: calc(100% / 3 * 2);
+  margin-right: 25px;
+  animation-name: bottom;
+  animation-duration: 1.5s;
+}
+.child-image2-about {
+  position: relative;
+  width: calc(100% / 3);
+  animation-name: top;
+  animation-duration: 1.5s;
+}
+.about-img-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  position: relative;
+  width: 40%;
+  animation-name: right;
+  animation-duration: 1.5s;
+}
+.about-wrapper {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+.about-content-title {
+  font-family: "Cosmetic";
+  font-size: 55px;
+  margin: 20px 0;
+}
+.about-content-text {
+  font-family: "Garbata";
+  line-height: 1.5;
+  font-size: 20px;
+  width: 70%;
+}
+
+/* Background */
+#background {
+  margin-top: 20%;
+}
+.background-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+.background-img {
+  position: relative;
+  animation-name: bottom;
+  animation-duration: 1.5s;
+}
+.learn-img {
+  width: 100%;
+  clip-path: inset(7% 0 0 0);
+  object-fit: cover;
+}
+.education {
+  position: relative;
+  margin-left: 15px;
+  animation-name: right;
+  animation-duration: 1.5s;
+}
+.education-title {
+  font-family: "Cosmetic";
+  padding-left: 15px;
+  margin: 30px 0;
+  font-size: 55px;
+}
+.education-text {
+  font-family: "Garbata";
+  line-height: 1.5;
+  font-size: 20px;
+  margin: 0;
+}
+
+.worked-with {
+  margin: 0 5%;
+}
+.worked-with-title {
+  position: relative;
+  font-family: "Cosmetic";
+  font-size: 55px;
+  animation-name: bottom;
+  animation-duration: 1.5s;
+}
+.workplace {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 20px;
+  gap: 50px;
+}
+.workplace-item-image {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+}
+
+/* Portfolio */
+#portfolio {
+  margin-top: 10%;
+}
+.web-design {
+  display: flex;
+}
+.web-design-content {
+  position: relative;
+  margin: 0 5%;
+  width: 30%;
+  animation-name: bottom;
+  animation-duration: 1.5s;
+}
+.web-design-title {
+  font-family: "Cosmetic";
+  font-size: 55px;
+  margin: 15% 0 10%;
+}
+.web-design-text {
+  font-family: "Garbata";
+  line-height: 1.5;
+  font-size: 20px;
+  width: 65%;
+}
+.study-products-img {
+  width: 100%;
+}
+
+.study-products {
+  display: flex;
+  width: 77%;
+}
+.study-products-item {
+  margin-left: 8%;
+}
+.study-products-text {
+  font-family: "Garbata";
+  line-height: 1.5;
+  font-size: 20px;
+  margin: 5% 0 10%;
+}
+
+.featured-products {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+}
+.featured-img {
+  width: 55%;
+}
+.featured-product-photos {
+  width: 100%;
+}
+.featured-products-content {
+  position: relative;
+  font-family: "Garbata";
+  line-height: 1.5;
+  width: 17%;
+  margin-left: 5%;
+  font-size: 20px;
+  animation-name: top;
+  animation-duration: 1.5s;
+}
+.mobile-featured-img {
+  width: 19%;
+  margin: 0 2%;
+  position: relative;
+}
+.mobile-featured-product-photos {
+  width: 100%;
+  position: absolute;
+  top: -110px;
+}
+
+.social-media-templates {
+  margin-top: 15%;
+}
+.social-media-templates-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 85%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  gap: 40px;
+}
+.social-media-templates-title {
+  position: relative;
+  font-family: "Cosmetic";
+  font-size: 55px;
+  width: 80%;
+  margin: 0;
+  animation-name: bottom;
+  animation-duration: 1.5s;
+}
+.social-media-templates-text {
+  position: relative;
+  font-family: "Garbata";
+  line-height: 1.5;
+  font-size: 20px;
+  margin: 0;
+  animation-name: right;
+  animation-duration: 1.5s;
+}
+
+.social-media-templates-item {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.social-media-templates-img {
+  width: 227px;
+}
+.social-media-img {
+  width: 100%;
+  object-fit: cover;
+}
+/* Maxim */
+.maxim {
+  position: relative;
+}
+.maxim-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.background-maxim {
+  width: 100%;
+}
+.maxim-content {
+  position: absolute;
+  font-family: "Garbata";
+  line-height: 1.5;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -90%);
+  font-size: 35px;
+  color: white;
+  text-align: center;
+}
+/* Home Wrapper */
+.home-wrapper {
+  max-width: 1352px;
+  margin: 0 auto;
+}
+/* Poster Design */
+.poster-design {
+  display: flex;
+  max-width: 1352px;
+}
+.poster-design-content {
+  position: relative;
+  width: 20%;
+  margin-left: 75px;
+  animation-name: right;
+  animation-duration: 1.5s;
+}
+.poster-design-products {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(2, 1fr);
+}
+.regular-design {
+  text-align: right;
+  text-align: -webkit-right;
+}
+.regular-design12 {
+  max-width: 45%;
+  margin: 25px;
+}
+.poster-degsin-img {
+  width: 100%;
+}
+
+.poster-design-title {
+  font-family: "Cosmetic";
+  font-size: 55px;
+}
+.poster-design-text {
+  font-family: "Garbata";
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.outstanding-design {
+  overflow: hidden;
+}
+.poster-design-img3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contact */
+.contact {
+  display: inline-flex;
+  width: 100%;
+}
+.contact-content {
+  position: relative;
+  margin-left: 75px;
+  width: 45%;
+  animation-name: right;
+  animation-duration: 1.5s;
+}
+.contact-title {
+  font-family: "Cosmetic";
+  font-size: 55px;
+}
+.contact-text {
+  font-family: "Garbata";
+  line-height: 1.5;
+  font-size: 20px;
+  margin: 0;
+}
+.info {
+  margin-bottom: 50px;
+}
+.info-end {
+  margin-bottom: 85px;
+}
+.footer-contact-img {
+  height: 40px;
+  width: 40px;
+}
+
+.contact-img {
+  position: relative;
+  width: 50%;
+  animation-name: left;
+  animation-duration: 1.5s;
+}
+.contact-img-item {
+  width: 100%;
+  object-fit: cover;
+}
+.footer-contact {
+  position: relative;
+  display: inline-flex;
+  margin: 50px 0;
+  animation-name: top;
+  animation-duration: 1.5s;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-text,
+.footer-item {
+  margin: 5px 10px;
+}
+.footer-item {
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+  /* Introduce yourself */
+  .home-content {
+    display: block;
+    margin-top: 40px;
+  }
+  .avt {
+    text-align: center;
+  }
+  .avt-img {
+    width: 80%;
+    margin: 0 auto;
+    clip-path: inset(7% 10% 0%);
+  }
+
+  .intro {
+    margin: 0 15%;
+    padding: 0 10%;
+  }
+  .intro-name {
+    font-size: clamp(70px, 9vw, 95px);
+  }
+
+  .intro-describe {
+    width: unset;
+    margin-top: 25px;
+  }
+  .footer-home-img {
+    right: 0;
+  }
+
+  /* About */
+  #about {
+    display: block;
+  }
+  .about-img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about-content {
+    position: unset;
+    width: 100%;
+  }
+  .about-wrapper {
+    position: unset;
+    margin: 0 5%;
+  }
+
+  /* Background */
+  #background {
+    margin-top: 10%;
+  }
+  .background-content {
+    display: block;
+  }
+  .background-img {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .worked-with {
+    margin: 0 3%;
+  }
+  .workplace {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Portfolio */
+  .web-design {
+    display: block;
+  }
+  .web-design-content {
+    width: unset;
+  }
+  .web-design-text {
+    width: unset;
+    margin: 0 0 5% 0;
+  }
+
+  .study-products {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .study-products-item {
+    margin-left: 0;
+  }
+
+  .featured-products {
+    display: block;
+  }
+  .mobile-featured-img,
+  .mobile-featured-product-photos {
+    position: unset;
+  }
+  .featured-img,
+  .featured-products-content,
+  .mobile-featured-img {
+    margin: 0 auto;
+  }
+  .featured-img {
+    width: 75%;
+  }
+  .featured-products-content {
+    width: 90%;
+    margin: 5%;
+  }
+  .mobile-featured-img {
+    width: 25%;
+  }
+
+  .social-media-templates-item {
+    max-width: 500px;
+  }
+
+  .social-media-templates-content {
+    display: block;
+    max-width: unset;
+    margin: 0 5% 50px;
+  }
+  .social-media-templates-title {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+  /* Maxim */
+  .maxim-content {
+    width: 95%;
+    left: 3%;
+    transform: unset;
+    font-size: 30px;
+  }
+
+  /* Poster Design */
+  .poster-design {
+    display: block;
+  }
+  .poster-design-content {
+    width: unset;
+    margin: 5%;
+  }
+  .poster-design-title {
+    margin-top: 0;
+  }
+  .poster-design-products {
+    margin: 0 auto;
+  }
+  .regular-design12 {
+    max-width: 55%;
+  }
+
+  /* Contact */
+  .contact {
+    display: block;
+  }
+  .contact-content {
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-img {
+    width: 70%;
+    margin: 0 auto;
+  }
+  /* Footer */
+}
+
+@media (max-width: 768px) {
+  /* Introduce yourself */
+  .avt {
+    margin-top: 20px;
+  }
+  .avt-img {
+    width: 100%;
+    transform: scale(1.1);
+  }
+  .intro {
+    padding: 0;
+  }
+  .intro-name {
+    font-size: clamp(60px, 12.5vw, 95px);
+  }
+  .intro-job {
+    font-size: 14px;
+  }
+  .intro-describe {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  /* About */
+  .about-img {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .child-image-about {
+    margin: 0 0 25px;
+  }
+  .about-content-title {
+    font-size: 45px;
+  }
+  .about-content-text {
+    font-size: 18px;
+  }
+
+  /* Background */
+  .workplace {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .worked-with {
+    margin: 0 5%;
+  }
+
+  .education-title {
+    font-size: 45px;
+  }
+  .education-text {
+    font-size: 18px;
+  }
+
+  .worked-with-title {
+    font-size: 45px;
+  }
+
+  /* Portfolio */
+  .study-products {
+    width: 50%;
+  }
+  .web-design-title {
+    font-size: 45px;
+  }
+  .web-design-text {
+    font-size: 18px;
+  }
+  .study-products-text {
+    font-size: 18px;
+  }
+
+  .social-media-templates-title {
+    margin-bottom: 35px;
+    font-size: 45px;
+  }
+  .social-media-templates-text {
+    font-size: 18px;
+  }
+  /* maxim */
+
+  .maxim-content {
+    font-size: 25px;
+  }
+
+  /* Poster Design */
+  .poster-design-products {
+    display: block;
+  }
+  .regular-design {
+    text-align: center;
+    text-align: -webkit-center;
+  }
+  .outstanding-design {
+    width: 100%;
+  }
+  .poster-design-title {
+    font-size: 45px;
+  }
+  .poster-design-text {
+    font-size: 18px;
+  }
+
+  /* Contact */
+  .contact-content {
+    width: 65%;
+  }
+  .contact-img {
+    width: 85%;
+  }
+  .contact-title {
+    font-size: 45px;
+  }
+  .contact-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Introduce yourself */
+  .intro {
+    margin: 0 5%;
+  }
+  .intro-name {
+    font-size: clamp(50px, 16vw, 80px);
+  }
+  .intro-job {
+    font-size: 12px;
+  }
+  .intro-describe {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  /* About */
+  .about-content-title {
+    font-size: 35px;
+  }
+  .about-content-text {
+    font-size: 16px;
+  }
+
+  /* Background */
+
+  .workplace {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .education-title {
+    font-size: 35px;
+  }
+  .education-text {
+    font-size: 16px;
+  }
+
+  .worked-with-title {
+    font-size: 35px;
+  }
+
+  /* Portfolio */
+  .study-products {
+    width: 80%;
+  }
+  .web-design-title {
+    font-size: 35px;
+  }
+  .web-design-text {
+    font-size: 16px;
+  }
+
+  .social-media-templates-title {
+    font-size: 35px;
+  }
+  .social-media-templates-text {
+    font-size: 16px;
+  }
+
+  /* Maxim */
+  .maxim-content {
+    font-size: 20px;
+    top: 30%;
+  }
+
+  /* Poster Design */
+  .poster-design-title {
+    font-size: 35px;
+  }
+  .poster-design-text {
+    font-size: 16px;
+  }
+
+  /* Contact */
+  .contact-content {
+    width: 75%;
+  }
+  .contact-img {
+    width: 90%;
+  }
+  .contact-title {
+    font-size: 35px;
+  }
+  .contact-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 376px) {
+  /* Portfolio */
+  .study-products {
+    width: 90%;
+  }
+}
+
+@keyframes right {
+  0% {
+    left: -50px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes left {
+  0% {
+    right: -50px;
+    top: 0px;
+  }
+  100% {
+    right: 0px;
+    top: 0px;
+  }
+}
+@keyframes top {
+  0% {
+    left: 0px;
+    bottom: -50px;
+  }
+  100% {
+    left: 0px;
+    bottom: 0px;
+  }
+}
+@keyframes bottom {
+  0% {
+    left: 0px;
+    top: -50px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
